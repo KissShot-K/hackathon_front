@@ -15,25 +15,41 @@ const Login = () => {
   });
   
   return (
-    <>
+    <div className="text-center p-4 bg-green-100 min-h-screen text-black">
+          <>
+          
+    
       <LoginForm />
+      <br></br>
       {/* ログインしていないと見られないコンテンツは、loginUserがnullの場合表示しない */}
       {loginUser ? 
       
       <BrowserRouter>
       <ul>
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8"
+      > 
         <li>
-          <Link to="/">Home</Link>
+                
+      <div className="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
+       <Link to="/">Home</Link>
+       </div>
+          
         </li>
+        <br></br>
         <li>
+        <div className="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
           <Link to="/timeline">Timeline</Link>
+          </div>
         </li>
+        </div>
       </ul>
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/timeline">
+        <Route exact path="/timeline">
           <Timeline />
         </Route>
         <Route>
@@ -46,6 +62,7 @@ const Login = () => {
       
       : null}
     </>
+    </div>
   );
 };
 

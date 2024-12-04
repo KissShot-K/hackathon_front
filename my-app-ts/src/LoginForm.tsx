@@ -1,6 +1,6 @@
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { fireAuth } from "./firebase";
-
+import { motion } from 'framer-motion'
 
 export const LoginForm: React.FC = () => {
   /**
@@ -35,12 +35,26 @@ export const LoginForm: React.FC = () => {
 
   return (
     <div>
-      <button onClick={signInWithGoogle}>
+      <div className="flex flex-col items-center justify-center bg-green-100">
+
+      <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className=" text-center p-10 bg-white backdrop-blur-lg rounded-xl max-w-2xl w-full mx-10 mt-8"
+            >
+      <button onClick={signInWithGoogle} className="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+      >
         Googleでログイン
       </button>
-      <button onClick={signOutWithGoogle}>
+      <br></br>
+      <br></br>
+      <button onClick={signOutWithGoogle} className="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+      >
         ログアウト
       </button>
+      </motion.div>
+    </div>
     </div>
   );
 };
