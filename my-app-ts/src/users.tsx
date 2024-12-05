@@ -180,6 +180,7 @@ const TweetsList: React.FC <TweetsListProps> = ({ trigger }) => {
                         <MessageCircle className="w-5 h-5 mr-2" />
                         <span>View Replies</span>
                       </button>
+                      <p className="text-gray-200 mt-1">FireRate:</p>
                       <p className="text-gray-200 mt-1">{tweet.fire_rate}</p>
                     </div>
                   </div>
