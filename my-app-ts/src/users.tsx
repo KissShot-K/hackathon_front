@@ -59,7 +59,7 @@ const TweetsList: React.FC <TweetsListProps> = ({ trigger }) => {
     const handleLike = async (tweetId: number) => {
         try {
             const response = await axios.post<{ likes_count: number }>(
-                `http://localhost:8080/tweet/like?id=${tweetId}`
+                `https://hackathon-back-2-297083343142.us-central1.run.app/tweet/like?id=${tweetId}`
             );
             // いいねが成功したら、更新されたツイートリストを取得
             setTweets((prevTweets) =>
@@ -75,7 +75,7 @@ const TweetsList: React.FC <TweetsListProps> = ({ trigger }) => {
     const fetchReplies = async (tweetId: number) => {
         try {
             const response = await axios.get<{ parent_tweet: ParentTweet; replies: Reply[] }>(
-                `http://localhost:8080/tweet/replies?id=${tweetId}`
+                `https://hackathon-back-2-297083343142.us-central1.run.app/tweet/replies?id=${tweetId}`
             );
             setSelectedTweet(response.data.parent_tweet);
             setReplies(response.data.replies);
@@ -88,7 +88,7 @@ const TweetsList: React.FC <TweetsListProps> = ({ trigger }) => {
         if (!selectedTweet) return;
 
         try {
-            await axios.post('http://localhost:8080/tweet/reply', {
+            await axios.post('https://hackathon-back-2-297083343142.us-central1.run.app/tweet/reply', {
                 content: replyContent,
                 parent_id: selectedTweet.id,
             });

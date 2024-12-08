@@ -20,7 +20,7 @@ function Timeline() {
 
     try {
       // API に新しい tweet を追加するための POST リクエスト
-      const response = await axios.post<Tweet>('http://localhost:8080/tweet', newTweet);
+      const response = await axios.post<Tweet>('https://hackathon-back-2-297083343142.us-central1.run.app/tweet', newTweet);
   
       // レスポンスから新しいツイートデータを取得
       const addedTweet = response.data;
