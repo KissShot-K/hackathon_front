@@ -47,7 +47,6 @@ const Login = () => {
       </ul>
       <Switch>
         <Route exact path="/">
-          <Home />
         </Route>
         <Route exact path="/timeline">
           <Timeline />
@@ -72,8 +71,6 @@ function NotFound() {
     return <h2>Not Found Page</h2>;
   }
 
-  function Home() {
-    return <h2>Home</h2>;
-  }
+  
   
   

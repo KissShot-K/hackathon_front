@@ -43,12 +43,8 @@ export const LoginForm: React.FC = () => {
               transition={{ delay: 0.5, duration: 0.5 }}
               className=" text-center p-10 bg-white backdrop-blur-lg rounded-xl max-w-2xl w-full mx-10 mt-8"
             >
-      <button onClick={signInWithGoogle} className="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
-      >
-        Googleでログイン
-      </button>
-      <br></br>
-      <br></br>
+      
+    
       <button onClick={signOutWithGoogle} className="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
       >
         ログアウト

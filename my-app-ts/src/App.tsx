@@ -3,7 +3,7 @@ import './App.css';
 import Login from "./Login"
 
 
-function App() {
+function Appp() {
   return (
     <div className="  flex flex-col items-center justify-center bg-green-300">
     <div >
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Appp;
