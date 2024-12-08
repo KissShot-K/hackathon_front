@@ -40,7 +40,7 @@ const TweetsList: React.FC <TweetsListProps> = ({ trigger }) => {
     useEffect(() => {
         const fetchTweets = async () => {
             try {
-                const response = await axios.get<Tweet[]>('http://localhost:8080/tweet'); // バックエンド API へのリクエスト
+                const response = await axios.get<Tweet[]>('https://hackathon-back-2-297083343142.us-central1.run.app/tweet'); // バックエンド API へのリクエスト
                 setTweets(response.data); // 取得したデータをステートに設定
             } catch (error) {
                 console.error('Error fetching tweets:', error); // エラーハンドリング
